@@ -1,0 +1,385 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: #1F2937;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom script font styling matching Figma text */
+.font-script-title {
+  font-family: 'Dancing Script', 'Satisfy', 'Pacifico', cursive;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* Inner Shadow for Add Item and Order buttons matching Figma filter6_i / filter7_i */
+.shadow-btn-dark {
+  box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.4), inset -2px -2px 4px rgba(255, 255, 255, 0.08), 0 8px 20px -4px rgba(35, 52, 76, 0.4);
+}
+
+.shadow-btn-light {
+  box-shadow: inset 3px 3px 6px rgba(255, 255, 255, 0.4), inset -2px -2px 4px rgba(0, 0, 0, 0.1), 0 8px 20px -4px rgba(0, 0, 0, 0.15);
+}
+
+/* Button Micro-Interactions */
+.btn-micro {
+  transition: transform 150ms cubic-bezier(0.22, 1, 0.36, 1), 
+              box-shadow 150ms cubic-bezier(0.22, 1, 0.36, 1), 
+              background-color 150ms cubic-bezier(0.22, 1, 0.36, 1),
+              filter 150ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, box-shadow;
+}
+
+.btn-micro:hover {
+  transform: translateY(-2px) scale(1.02);
+}
+
+.btn-micro:active {
+  transform: translateY(0) scale(0.97);
+}
+
+/* =========================================================================
+   GENUINE ORBITAL ARC MOTION FLOW (Derived directly from reference video ~680ms)
+   ========================================================================= */
+
+/* Large Pie Orbital Arc - Forward (Continuous downward & outward sweep to bottom-right) */
+@keyframes pieOrbitalOutForward {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  15% {
+    transform: translate3d(3%, 20%, 0) rotate(-1.5deg) scale(1.008);
+    opacity: 1;
+  }
+  30% {
+    transform: translate3d(10%, 46%, 0) rotate(-3.2deg) scale(1.012);
+    opacity: 0.98;
+  }
+  50% {
+    transform: translate3d(25%, 78%, 0) rotate(-5.2deg) scale(0.995);
+    opacity: 0.92;
+  }
+  70% {
+    transform: translate3d(52%, 110%, 0) rotate(-7.5deg) scale(0.965);
+    opacity: 0.78;
+  }
+  85% {
+    transform: translate3d(80%, 136%, 0) rotate(-9deg) scale(0.935);
+    opacity: 0.45;
+  }
+  100% {
+    transform: translate3d(115%, 158%, 0) rotate(-10.5deg) scale(0.90);
+    opacity: 0;
+  }
+}
+
+/* Large Pie Orbital Arc - Incoming Forward (Simultaneous entrance from upper-right orbit) */
+@keyframes pieOrbitalInForward {
+  0% {
+    transform: translate3d(115%, -158%, 0) rotate(10.5deg) scale(0.90);
+    opacity: 0;
+  }
+  15% {
+    transform: translate3d(80%, -136%, 0) rotate(9deg) scale(0.935);
+    opacity: 0.45;
+  }
+  30% {
+    transform: translate3d(52%, -110%, 0) rotate(7.5deg) scale(0.965);
+    opacity: 0.78;
+  }
+  50% {
+    transform: translate3d(25%, -78%, 0) rotate(5.2deg) scale(0.995);
+    opacity: 0.92;
+  }
+  70% {
+    transform: translate3d(10%, -46%, 0) rotate(3.2deg) scale(1.012);
+    opacity: 0.98;
+  }
+  85% {
+    transform: translate3d(3%, -20%, 0) rotate(1.5deg) scale(1.008);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Large Pie Orbital Arc - Backward (Continuous upward & outward sweep to top-right) */
+@keyframes pieOrbitalOutBackward {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  15% {
+    transform: translate3d(3%, -20%, 0) rotate(1.5deg) scale(1.008);
+    opacity: 1;
+  }
+  30% {
+    transform: translate3d(10%, -46%, 0) rotate(3.2deg) scale(1.012);
+    opacity: 0.98;
+  }
+  50% {
+    transform: translate3d(25%, -78%, 0) rotate(5.2deg) scale(0.995);
+    opacity: 0.92;
+  }
+  70% {
+    transform: translate3d(52%, -110%, 0) rotate(7.5deg) scale(0.965);
+    opacity: 0.78;
+  }
+  85% {
+    transform: translate3d(80%, -136%, 0) rotate(9deg) scale(0.935);
+    opacity: 0.45;
+  }
+  100% {
+    transform: translate3d(115%, -158%, 0) rotate(10.5deg) scale(0.90);
+    opacity: 0;
+  }
+}
+
+/* Large Pie Orbital Arc - Incoming Backward (Simultaneous entrance from lower-right orbit) */
+@keyframes pieOrbitalInBackward {
+  0% {
+    transform: translate3d(115%, 158%, 0) rotate(-10.5deg) scale(0.90);
+    opacity: 0;
+  }
+  15% {
+    transform: translate3d(80%, 136%, 0) rotate(-9deg) scale(0.935);
+    opacity: 0.45;
+  }
+  30% {
+    transform: translate3d(52%, 110%, 0) rotate(-7.5deg) scale(0.965);
+    opacity: 0.78;
+  }
+  50% {
+    transform: translate3d(25%, 78%, 0) rotate(-5.2deg) scale(0.995);
+    opacity: 0.92;
+  }
+  70% {
+    transform: translate3d(10%, 46%, 0) rotate(-3.2deg) scale(1.012);
+    opacity: 0.98;
+  }
+  85% {
+    transform: translate3d(3%, 20%, 0) rotate(-1.5deg) scale(1.008);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Background Blob Wave Continuous Flow */
+@keyframes blobFlowOutForward {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(6%, 15%, 0) scale(0.96);
+    opacity: 0;
+  }
+}
+
+@keyframes blobFlowInForward {
+  0% {
+    transform: translate3d(6%, -15%, 0) scale(0.96);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes blobFlowOutBackward {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(6%, -15%, 0) scale(0.96);
+    opacity: 0;
+  }
+}
+
+@keyframes blobFlowInBackward {
+  0% {
+    transform: translate3d(6%, 15%, 0) scale(0.96);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Floating Fruits Layer Supporting Flow */
+@keyframes fruitFlowOutForward {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(4%, 18%, 0) rotate(-4deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fruitFlowInForward {
+  0% {
+    transform: translate3d(4%, -18%, 0) rotate(4deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes fruitFlowOutBackward {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(4%, -18%, 0) rotate(4deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fruitFlowInBackward {
+  0% {
+    transform: translate3d(4%, 18%, 0) rotate(-4deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+/* Title Flow Out & In */
+@keyframes textFlowOutForward {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, -22px, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes textFlowInForward {
+  0% {
+    transform: translate3d(0, 22px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes textFlowOutBackward {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, 22px, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes textFlowInBackward {
+  0% {
+    transform: translate3d(0, -22px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+/* Description Flow Out & In */
+@keyframes descFlowOutForward {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, -16px, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes descFlowInForward {
+  0% {
+    transform: translate3d(0, 16px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes descFlowOutBackward {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, 16px, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes descFlowInBackward {
+  0% {
+    transform: translate3d(0, -16px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

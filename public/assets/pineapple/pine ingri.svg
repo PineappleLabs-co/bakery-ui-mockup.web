@@ -7,10 +7,6 @@
 <ellipse cx="28.2419" cy="31.3247" rx="28.2419" ry="31.3247" transform="matrix(0.701049 0.713113 -0.713113 0.701048 628.869 501.405)" fill="#FEFADE"/>
 <rect x="572.886" y="567.264" width="71.6998" height="86.0399" transform="rotate(-75.4888 572.886 567.264)" fill="url(#pattern4_121_275)"/>
 </g>
-<g opacity="0.6">
-<ellipse cx="24.2713" cy="26.9207" rx="24.2713" ry="26.9207" transform="matrix(0.701049 -0.713113 -0.713113 -0.701048 50.5923 300.993)" fill="#FEFADE"/>
-<rect width="61.6193" height="73.9433" transform="matrix(0.25057 0.968098 0.968098 -0.25057 2.48047 244.393)" fill="url(#pattern5_121_275)"/>
-</g>
 <defs>
 <pattern id="pattern0_121_275" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0_121_275" transform="matrix(0.00253165 0 0 0.00215054 0 -0.744086)"/>
