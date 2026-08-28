@@ -1,3 +1,9 @@
+const BASE = import.meta.env.BASE_URL.endsWith('/') 
+  ? import.meta.env.BASE_URL 
+  : `${import.meta.env.BASE_URL}/`;
+
+const asset = (path) => `${BASE}${path.startsWith('/') ? path.slice(1) : path}`;
+
 export const FLAVORS = [
   {
     id: 'pineapple',
@@ -27,15 +33,15 @@ export const FLAVORS = [
     accentColor: '#23344C',
     textColor: '#1F2937',
     assets: {
-      logo: '/assets/pineapple/logo.png',
-      logoSvg: '/assets/pineapple/logo.svg',
-      pieGrp: '/assets/pineapple/pie GRP.svg',
-      miniSlice: '/assets/pineapple/mini slice.png',
-      ingredientsImg: '/assets/pineapple/pine ingri.svg',
-      bodyTxt: '/assets/pineapple/Body txt.png',
-      blobSvg: '/assets/pineapple/blob.svg',
-      blobImg: '/assets/pineapple/blob.png',
-      select: '/assets/pineapple/select.svg'
+      logo: asset('/assets/pineapple/logo.png'),
+      logoSvg: asset('/assets/pineapple/logo.svg'),
+      pieGrp: asset('/assets/pineapple/pie GRP.svg'),
+      miniSlice: asset('/assets/pineapple/mini slice.png'),
+      ingredientsImg: asset('/assets/pineapple/pine ingri.svg'),
+      bodyTxt: asset('/assets/pineapple/Body txt.png'),
+      blobSvg: asset('/assets/pineapple/blob.svg'),
+      blobImg: asset('/assets/pineapple/blob.png'),
+      select: asset('/assets/pineapple/select.svg')
     }
   },
   {
@@ -66,15 +72,15 @@ export const FLAVORS = [
     accentColor: '#23344C',
     textColor: '#1F2937',
     assets: {
-      logo: '/assets/avocado/logo.png',
-      logoSvg: '/assets/avocado/logo.svg',
-      pieGrp: '/assets/avocado/pie GRP.svg',
-      miniSlice: '/assets/avocado/mini slice.png',
-      ingredientsImg: '/assets/avocado/ingri avocado.svg',
-      bodyTxt: '/assets/avocado/Body txt.png',
-      blobSvg: '/assets/avocado/blob.svg',
-      blobImg: '/assets/avocado/blob.png',
-      select: '/assets/avocado/select.svg'
+      logo: asset('/assets/avocado/logo.png'),
+      logoSvg: asset('/assets/avocado/logo.svg'),
+      pieGrp: asset('/assets/avocado/pie GRP.svg'),
+      miniSlice: asset('/assets/avocado/mini slice.png'),
+      ingredientsImg: asset('/assets/avocado/ingri avocado.svg'),
+      bodyTxt: asset('/assets/avocado/Body txt.png'),
+      blobSvg: asset('/assets/avocado/blob.svg'),
+      blobImg: asset('/assets/avocado/blob.png'),
+      select: asset('/assets/avocado/select.svg')
     }
   },
   {
@@ -105,15 +111,15 @@ export const FLAVORS = [
     accentColor: '#23344C',
     textColor: '#1F2937',
     assets: {
-      logo: '/assets/banana/logo.png',
-      logoSvg: '/assets/banana/logo.svg',
-      pieGrp: '/assets/banana/pie GRP.svg',
-      miniSlice: '/assets/banana/mini slice.png',
-      ingredientsImg: '/assets/banana/banana infri.svg',
-      bodyTxt: '/assets/banana/Body txt.png',
-      blobSvg: '/assets/banana/blob.svg',
-      blobImg: '/assets/banana/blob.png',
-      select: '/assets/banana/select.svg'
+      logo: asset('/assets/banana/logo.png'),
+      logoSvg: asset('/assets/banana/logo.svg'),
+      pieGrp: asset('/assets/banana/pie GRP.svg'),
+      miniSlice: asset('/assets/banana/mini slice.png'),
+      ingredientsImg: asset('/assets/banana/banana infri.svg'),
+      bodyTxt: asset('/assets/banana/Body txt.png'),
+      blobSvg: asset('/assets/banana/blob.svg'),
+      blobImg: asset('/assets/banana/blob.png'),
+      select: asset('/assets/banana/select.svg')
     }
   },
   {
@@ -144,15 +150,15 @@ export const FLAVORS = [
     accentColor: '#23344C',
     textColor: '#1F2937',
     assets: {
-      logo: '/assets/apple/logo.png',
-      logoSvg: '/assets/apple/logo.svg',
-      pieGrp: '/assets/apple/pie GRP.svg',
-      miniSlice: '/assets/apple/mini slice.png',
-      ingredientsImg: '/assets/apple/aple ingri.svg',
-      bodyTxt: '/assets/apple/Body txt.png',
-      blobSvg: '/assets/apple/blob.svg',
-      blobImg: '/assets/apple/blob.png',
-      select: '/assets/apple/select.svg'
+      logo: asset('/assets/apple/logo.png'),
+      logoSvg: asset('/assets/apple/logo.svg'),
+      pieGrp: asset('/assets/apple/pie GRP.svg'),
+      miniSlice: asset('/assets/apple/mini slice.png'),
+      ingredientsImg: asset('/assets/apple/aple ingri.svg'),
+      bodyTxt: asset('/assets/apple/Body txt.png'),
+      blobSvg: asset('/assets/apple/blob.svg'),
+      blobImg: asset('/assets/apple/blob.png'),
+      select: asset('/assets/apple/select.svg')
     }
   }
 ];
