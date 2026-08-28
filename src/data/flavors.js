@@ -35,7 +35,7 @@ export const FLAVORS = [
     assets: {
       logo: asset('/assets/pineapple/logo.png'),
       logoSvg: asset('/assets/pineapple/logo.svg'),
-      pieGrp: asset('/assets/pineapple/pie GRP.svg'),
+      pieGrp: asset('/assets/pineapple/pie GRP.png'),
       miniSlice: asset('/assets/pineapple/mini slice.png'),
       ingredientsImg: asset('/assets/pineapple/pine ingri.svg'),
       bodyTxt: asset('/assets/pineapple/Body txt.png'),
@@ -74,7 +74,7 @@ export const FLAVORS = [
     assets: {
       logo: asset('/assets/avocado/logo.png'),
       logoSvg: asset('/assets/avocado/logo.svg'),
-      pieGrp: asset('/assets/avocado/pie GRP.svg'),
+      pieGrp: asset('/assets/avocado/pie GRP.png'),
       miniSlice: asset('/assets/avocado/mini slice.png'),
       ingredientsImg: asset('/assets/avocado/ingri avocado.svg'),
       bodyTxt: asset('/assets/avocado/Body txt.png'),
@@ -113,7 +113,7 @@ export const FLAVORS = [
     assets: {
       logo: asset('/assets/banana/logo.png'),
       logoSvg: asset('/assets/banana/logo.svg'),
-      pieGrp: asset('/assets/banana/pie GRP.svg'),
+      pieGrp: asset('/assets/banana/pie GRP.png'),
       miniSlice: asset('/assets/banana/mini slice.png'),
       ingredientsImg: asset('/assets/banana/banana infri.svg'),
       bodyTxt: asset('/assets/banana/Body txt.png'),
@@ -152,7 +152,7 @@ export const FLAVORS = [
     assets: {
       logo: asset('/assets/apple/logo.png'),
       logoSvg: asset('/assets/apple/logo.svg'),
-      pieGrp: asset('/assets/apple/pie GRP.svg'),
+      pieGrp: asset('/assets/apple/pie GRP.png'),
       miniSlice: asset('/assets/apple/mini slice.png'),
       ingredientsImg: asset('/assets/apple/aple ingri.svg'),
       bodyTxt: asset('/assets/apple/Body txt.png'),
