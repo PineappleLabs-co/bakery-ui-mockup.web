@@ -58,6 +58,15 @@ export default function App() {
     });
   }, []);
 
+  // Dynamically synchronize the right-side scrollbar colors with the active background color
+  useEffect(() => {
+    const root = document.documentElement;
+    root.style.setProperty('--scroll-bg', currentFlavor.bgColor);
+    root.style.setProperty('--scroll-accent', currentFlavor.accentColor || '#23344C');
+    root.style.setProperty('--scroll-blob', currentFlavor.blobColor);
+    document.body.style.backgroundColor = currentFlavor.bgColor;
+  }, [currentFlavor]);
+
   // Show Toast helper
   const showToast = (message, actionText = '', onAction = null) => {
     setToast({ visible: true, message, actionText, onAction });
