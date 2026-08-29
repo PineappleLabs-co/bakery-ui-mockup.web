@@ -31,7 +31,7 @@ export default function HeroSection({
   const heroOpacity = Math.max(0.3, 1 - scrollY / 600);
 
   return (
-    <section className="relative min-h-[calc(100vh-80px)] w-full flex items-center overflow-hidden pt-24 md:pt-28 pb-12 px-6 sm:px-12 lg:px-24">
+    <section className="relative min-h-[calc(100vh-80px)] w-full flex items-center overflow-hidden pt-20 md:pt-24 lg:pt-28 pb-8 md:pb-12 px-6 sm:px-10 lg:px-16 xl:px-24">
       
       {/* Background Organic Wave Blob Layer (Transitions simultaneously with the pie) */}
       <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
@@ -113,13 +113,13 @@ export default function HeroSection({
 
       {/* Main Grid Content Container */}
       <div 
-        className="max-w-[1280px] w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center z-20 relative"
+        className="max-w-[1360px] w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center z-20 relative"
         style={{ opacity: heroOpacity }}
       >
         
         {/* Left Column: Title, Copy, Selector, Actions — STRICT TEXT SAFE ZONE */}
         <div 
-          className="lg:col-span-6 flex flex-col justify-center items-start pt-2 lg:pt-0 z-30 relative pointer-events-auto"
+          className="lg:col-span-6 xl:col-span-6 flex flex-col justify-center items-start pt-2 lg:pt-0 z-30 relative pointer-events-auto"
           style={{
             transform: `translate3d(0, -${parallaxTextOffset}px, 0)`,
             transition: 'transform 100ms ease-out'
@@ -127,12 +127,12 @@ export default function HeroSection({
         >
           
           {/* Title in Script Typography — Simultaneous Dual Layer */}
-          <div className="relative mb-3 sm:mb-4 overflow-visible h-16 sm:h-20 md:h-24 lg:h-28 w-full flex items-center">
+          <div className="relative mb-2 sm:mb-3 overflow-visible min-h-[3.75rem] sm:min-h-[4.75rem] md:min-h-[5.5rem] lg:min-h-[6.5rem] xl:min-h-[7.5rem] w-full flex items-center">
             {isTransitioning && prevFlavor ? (
               <>
                 {/* Outgoing Title */}
                 <h1 
-                  className="absolute top-0 left-0 font-script-title text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-[#23344C] tracking-tight leading-tight select-none pointer-events-none"
+                  className="absolute top-0 left-0 font-script-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-[#23344C] tracking-tight leading-none select-none pointer-events-none"
                   style={{
                     animation: direction > 0
                       ? 'textFlowOutForward 680ms cubic-bezier(0.2, 0.85, 0.3, 1) forwards'
@@ -143,7 +143,7 @@ export default function HeroSection({
                 </h1>
                 {/* Incoming Title */}
                 <h1 
-                  className="absolute top-0 left-0 font-script-title text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-[#23344C] tracking-tight leading-tight select-none"
+                  className="absolute top-0 left-0 font-script-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-[#23344C] tracking-tight leading-none select-none"
                   style={{
                     animation: direction > 0
                       ? 'textFlowInForward 680ms cubic-bezier(0.2, 0.85, 0.3, 1) forwards'
@@ -155,7 +155,7 @@ export default function HeroSection({
               </>
             ) : (
               /* Resting Stable Title */
-              <h1 className="font-script-title text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-[#23344C] tracking-tight leading-tight select-none">
+              <h1 className="font-script-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-[#23344C] tracking-tight leading-none select-none">
                 {currentFlavor.title}
               </h1>
             )}
@@ -233,10 +233,10 @@ export default function HeroSection({
         </div>
 
         {/* Right Column: Large Pie CONTINUOUS ORBITAL SWEEP & SIMULTANEOUS HANDOFF */}
-        <div className="lg:col-span-6 relative flex items-center justify-center lg:justify-end overflow-visible pointer-events-none">
+        <div className="lg:col-span-6 xl:col-span-6 relative flex items-center justify-center lg:justify-end overflow-visible pointer-events-none">
           
           <div 
-            className="relative w-full max-w-[500px] sm:max-w-[560px] md:max-w-[640px] lg:max-w-[700px] aspect-[1/1] flex items-center justify-center lg:justify-end overflow-visible"
+            className="relative w-full max-w-[320px] sm:max-w-[400px] md:max-w-[480px] lg:max-w-[540px] xl:max-w-[620px] 2xl:max-w-[680px] max-h-[58vh] lg:max-h-[68vh] aspect-[1/1] flex items-center justify-center lg:justify-end overflow-visible"
             style={{
               transform: `translate3d(0, -${parallaxPieOffset}px, 0)`,
               transition: 'transform 100ms ease-out'

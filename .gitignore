@@ -26,6 +26,7 @@ dist-ssr
 # Cache
 .vite
 .vite_cache
+.cache_vite
 
 # Large video files
 *.mp4

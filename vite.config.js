@@ -3,7 +3,8 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/bakery-ui-mockup.web/',
+  base: './',
+  cacheDir: './.cache_vite',
   server: {
     port: 3000,
     open: false,
