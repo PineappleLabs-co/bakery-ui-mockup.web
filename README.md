@@ -2,6 +2,9 @@
 
 A fresh, interactive artisanal bakery web application built with **React**, **Vite**, and **Tailwind CSS**. Features custom script typography, multi-layer organic background waves, continuous curved orbital transitions for artisanal pies, detailed flavor customization, interactive cart, menu modal, and responsive design.
 
+## 🌐 Live Demo
+Visit the live bakery mockup: [https://pineapplelabs-co.github.io/bakery-ui-mockup.web/](https://pineapplelabs-co.github.io/bakery-ui-mockup.web/)
+
 ## ✨ Features
 
 - **Continuous Orbital Arc Hero Motion**: Smooth curved trajectory transitions between pie flavors with simultaneous handoff, momentum physics, and zero midpoint halt.
@@ -23,10 +26,10 @@ A fresh, interactive artisanal bakery web application built with **React**, **Vi
 
 ```bash
 # Clone the repository
-git clone https://github.com/abhigna-26/bakery-ui-mockup.git
+git clone https://github.com/PineappleLabs-co/bakery-ui-mockup.web.git
 
 # Navigate into project directory
-cd bakery-ui-mockup
+cd bakery-ui-mockup.web
 
 # Install dependencies
 npm install
